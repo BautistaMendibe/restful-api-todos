@@ -4,7 +4,10 @@
   "description": "restful-api para hacker rank",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/server.js",
+    "dev": "ts-node src/server.ts",
+    "build": "tsc",
+    "test": "echo \"No hay pruebas definidas\" && exit 0"
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +15,9 @@
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0"
   }
 }
