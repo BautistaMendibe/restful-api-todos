@@ -4,20 +4,22 @@
   "description": "restful-api para hacker rank",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/server.js",
-    "dev": "ts-node src/server.ts",
+    "start": "nodemon dist/server.js",
+    "dev": "nodemon src/server.ts",
     "build": "tsc",
     "test": "echo \"No hay pruebas definidas\" && exit 0"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.8.2",
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.0"
+    "@types/express": "^5.0.0",
+    "ts-node": "^10.9.2"
   }
 }

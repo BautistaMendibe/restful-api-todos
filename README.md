@@ -15,4 +15,5 @@ Usar Node.js con Express.
 Programar en TypeScript.
 Validar errores correctamente.
 No requiere base de datos (usaremos un array en memoria).
+Usar el endpoint de https://jsonplaceholder.typicode.com/todos
 Implementar middleware para manejo de errores.
