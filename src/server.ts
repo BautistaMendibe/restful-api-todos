@@ -71,3 +71,14 @@ app.put('/todos/:id', async (req: Request, res: Response) => {
         res.status(500).json(error);
     }
 });
+
+app.delete('/todos/:id', async (req: Request, res: Response) => {
+    const id: number = +req.params.id;
+    try {
+        const response = await axios.delete(`${URL_API}/${id}`);
+        res.send(response.data);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json(error);
+    }
+});
