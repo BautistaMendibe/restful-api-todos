@@ -58,3 +58,16 @@ app.post('/todos', async (req: Request, res: Response) => {
         res.status(500).json(error);
     }
 });
+
+
+app.put('/todos/:id', async (req: Request, res: Response) => {
+    const id: number = +req.params.id;
+    try {
+        const response = await axios.put<Todo>(`${URL_API}/${id}`);
+        const todo = response.data;
+        res.send(todo);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json(error);
+    }
+});
